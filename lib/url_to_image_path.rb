@@ -1,8 +1,9 @@
 require "url_to_image_path/version"
 
 module UrlToImagePath
-  def self.hello
-    puts "Hello World"
-    "Hello World"
+  class Railtie < Rails::Railtie
+    rake_tasks do 
+      load '../tasks/convert_urls.rake'      
+    end
   end
 end

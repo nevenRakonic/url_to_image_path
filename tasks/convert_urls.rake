@@ -4,7 +4,7 @@ require 'tempfile'
 desc "receives a css file and returns an scss file with url links changed to 
       asset pipeline helpers"
 
-namespace :test do
+namespace :url do
   task :urlify, [:filename] do |title, args|
     file_name = args[:filename]
     assets_path = Rails.root.join('app/assets/stylesheets/') 

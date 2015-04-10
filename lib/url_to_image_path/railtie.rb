@@ -6,7 +6,7 @@ module MyPlugin
     railtie_name :url_to_image_path
 
     rake_tasks do
-      Dir[File.join(File.dirname(__FILE__),'tasks/*.rake')].each { |f| load f }
+      load "../../tasks/convert_urls.rake"
     end
   end
 end

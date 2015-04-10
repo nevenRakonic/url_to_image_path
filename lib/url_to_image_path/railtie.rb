@@ -6,7 +6,7 @@ module MyPlugin
     railtie_name :url_to_image_path
 
     rake_tasks do
-      load "../../tasks/convert_urls.rake"
+      require_relative "../../tasks/convert_urls"
     end
   end
 end

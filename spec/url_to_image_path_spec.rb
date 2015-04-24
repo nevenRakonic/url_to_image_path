@@ -6,17 +6,21 @@ describe UrlToImagePath do
     expect(UrlToImagePath::VERSION).not_to be nil
   end
 
-  describe "rake task test" do
+  describe "urlify task" do
     before do
       load File.expand_path("../../tasks/convert_urls.rb", __FILE__)
       Rake::Task.define_task(:environment)
+      setup
+      Rake::Task["url:urlify"].invoke("test.css")
     end
 
-    it ":foo returns foo" do
-      # expect(Foo).to receive :bar
-      # Rake::Task["url:foo"].invoke
-      # Rake::Task["url:foo"].reenable
-      # expect(Rake::Task["url:foo"].invoke).to eq "foo"
+    after do
+      teardown
+    end
+
+    it "creates a new scss file in the same folder as original file" do      
+      @result_path = @folder_path.join("test.css.scss")
+      expect(File.file? @result_path).to eq true
     end
   end
 

@@ -7,13 +7,12 @@ desc "receives a css file and returns an scss file with url links changed to
 namespace :url do
   task :urlify, [:filename] do |title, args|
     file_name = args[:filename]
-    puts "here"
 
-    # if Rails      
-    #   assets_path = Rails.root.join('app/assets/stylesheets/')
-    # else
+    if defined? Rails      
+      assets_path = Rails.root.join('app/assets/stylesheets/')
+    else
       assets_path = Pathname.new("./temp")
-    # end
+    end
 
     # looks for either end of parenthesis and the slash sign
     split_pattern = /[\(\)\/]/

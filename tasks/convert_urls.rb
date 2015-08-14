@@ -5,7 +5,7 @@ desc "receives a css file and returns an scss file with url links changed to
       asset pipeline helpers"
 
 namespace :url do
-  task :urlify, [:filename] do |title, args|
+  task :to_image_path, [:filename] do |title, args|
     file_name = args[:filename]
 
     if defined? Rails

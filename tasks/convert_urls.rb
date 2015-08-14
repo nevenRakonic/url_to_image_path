@@ -16,7 +16,7 @@ namespace :url do
 
     # looks for either end of parenthesis and the slash sign
     split_pattern = /[\(\)\/]/
-    image_extensions = /(\.png)|(\.jpg)|(\.jpeg)||(\.gif)|(\.svg)|(\.tiff)/i
+    image_extensions = /(\.png)|(\.jpg)|(\.jpeg)|(\.gif)|(\.svg)|(\.tiff)/i
 
     # we create a temporary file
     tmp = Tempfile.new("tmp")

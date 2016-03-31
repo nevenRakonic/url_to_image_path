@@ -1,8 +1,6 @@
 # UrlToImagePath
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/url_to_image_path`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Changes urls in regular css files into asset helper paths that can be used in rails.
 
 ## Installation
 
@@ -22,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run the rake task:
+
+    $ rake url:to_image_path[filename.css]
 
 ## Development
 

@@ -4,8 +4,8 @@ require 'rake'
 describe UrlToImagePath do
   let (:rake_invoke) do
     Rake::Task.define_task(:environment)
-    Rake::Task["url:urlify"].invoke("test.css")
-    Rake::Task["url:urlify"].reenable
+    Rake::Task["url:to_image_path"].invoke("test.css")
+    Rake::Task["url:to_image_path"].reenable
   end
 
   it 'has a version number' do
